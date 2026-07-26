@@ -1,0 +1,39 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+php_errors.log
+
+# Storage
+/public/storage/
+/storage/*.key
+
+# PHPUnit
+.phpunit.result.cache
+/phpunit.xml
+
+# IDE
+.vscode/
+.idea/
+
+# PHP CS Fixer
+.php-cs-fixer.cache
+
+# PHPStan
+.phpstan-cache
+
+# Coverage
+coverage/
+coverage.xml
+/tests/coverage*
+
+# Temporary
+.DS_Store
+Thumbs.db

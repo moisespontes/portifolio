@@ -1,0 +1,24 @@
+{
+  "name": "devpontes/portifolio",
+  "description": "Painel de gestão para portfólio pessoal",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "Source\\": "src/",
+      "Core\\": "core/"
+    },
+    "files": [
+      "config/configs.php",
+      "config/functions.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "moisespontes",
+      "email": "moises@devpontes.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "require-dev": {}
+}

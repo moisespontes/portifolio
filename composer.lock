@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f89b73bf6120db6667f508eafd927a60",
+    "packages": [
+        {
+            "name": "devpontes/view",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moisespontes/view.git",
+                "reference": "bfed5060a2f14b2f477f91d3f26bf71141f705c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moisespontes/view/zipball/bfed5060a2f14b2f477f91d3f26bf71141f705c8",
+                "reference": "bfed5060a2f14b2f477f91d3f26bf71141f705c8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DevPontes\\View\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moises Pontes",
+                    "email": "sesiom_assis@hotmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "View é um componente simples para renderização de templates com PHP nativo",
+            "keywords": [
+                "blade",
+                "plates",
+                "templates",
+                "twig",
+                "views"
+            ],
+            "support": {
+                "issues": "https://github.com/moisespontes/view/issues",
+                "source": "https://github.com/moisespontes/view/tree/v4.0.2"
+            },
+            "time": "2026-03-06T16:14:30+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "devpontes/view": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}
