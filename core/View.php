@@ -17,9 +17,10 @@ class View
         );
     }
 
-    public function render(Response $response, string $template, array $data = []): Response
+    public function render(Response $response, string $view, array $data = [], string $ext = 'html.twig'): Response
     {
-        return $this->twig->render($response, $template, $data);
+        $view = str_replace('.', '/', $view) . '.' . $ext;
+        return $this->twig->render($response, $view, $data);
     }
 
     public function getTwig(): Twig

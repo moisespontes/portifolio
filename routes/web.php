@@ -3,5 +3,7 @@
 use Slim\App;
 use App\Http\Controllers\Home;
 
+$home = new Home($view);
+
 /** @var App $app */
-$app->get('/', [Home::class, 'index']);
+$app->get('/', [$home, 'index']);

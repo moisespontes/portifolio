@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+	    {% include 'web/includes/head.html.twig' %}
+    </head>
+
+	<body>
+
+		{% include 'web/includes/header.html.twig' %}
+
+		<main class="container">
+            {% block content %}{% endblock %}
+		</main>
+
+		{% include 'web/includes/footer.html.twig' %}
+
+	</body>
+</html>
