@@ -1,12 +1,7 @@
 <?php
 
 use Slim\App;
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
+use App\Http\Controllers\Home;
 
 /** @var App $app */
-$app->get('/', function (Request $request, Response $response, $args) {
-    $response->getBody()->write('Página inicial');
-
-    return $response;
-});
+$app->get('/', [Home::class, 'index']);
