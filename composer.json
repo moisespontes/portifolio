@@ -4,7 +4,7 @@
   "license": "proprietary",
   "autoload": {
     "psr-4": {
-      "Source\\": "src/",
+      "App\\": "app/",
       "Core\\": "core/"
     },
     "files": [
