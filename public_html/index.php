@@ -1,15 +1,16 @@
 <?php
 
-use Dotenv\Dotenv;
+use Slim\Factory\AppFactory;
 
 // Importa o autoload do composer
 require __DIR__ . '/../vendor/autoload.php';
 
-// .env init
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
-
 // Importa configurações inicias do app
 require __DIR__ . '/../config/bootstrap.php';
 
-ob_end_flush();
+$app = AppFactory::create();
+
+// Importa as rotas
+require __DIR__ . '/../routes/web.php';
+
+$app->run();
