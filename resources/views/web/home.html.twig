@@ -1,5 +1,603 @@
 {% extends "web/layout.html.twig" %}
 
+{% block title %}
+	Home
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
 {% block content %}
-    <p>home</p>
+	<main
+		id="topo">
+
+		<!-- =============================== HERO =============================== -->
+		<section class="hero" id="hero">
+			<img src="assets/img/hero-pattern.svg" alt="" class="hero__pattern"/>
+
+			<div class="container hero__grid">
+				<div class="hero__content">
+					<p class="hero__greeting">Olá, eu sou o</p>
+					<h1 class="hero__name">PONTES</h1>
+					<p class="hero__role">
+						<span class="accent">DESENVOLVEDOR</span>
+						BACKEND PHP</p>
+					<p class="hero__desc">
+						Desenvolvo soluções robustas, escaláveis e eficientes. Especialista em
+																																																																																																																																																																																																																																																			            integrações, APIs e automações que conectam sistemas e pessoas.
+					</p>
+
+					<div class="hero__actions">
+						<a href="#contato" class="btn btn-primary">
+							<ion-icon name="paper-plane-outline"></ion-icon>
+							Vamos conversar
+						</a>
+						<a href="#" class="btn btn-outline" id="downloadCv">
+							<ion-icon name="download-outline"></ion-icon>
+							Baixar CV
+						</a>
+					</div>
+
+					<div class="hero__socials">
+						<a href="https://github.com/moisespontes" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+							<ion-icon name="logo-github"></ion-icon>
+						</a>
+						<a href="https://www.linkedin.com/in/moisesapontes/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+							<ion-icon name="logo-linkedin"></ion-icon>
+						</a>
+						<a href="mailto:contato@devpontes.com.br" class="social-icon" aria-label="E-mail">
+							<ion-icon name="mail-outline"></ion-icon>
+						</a>
+						<a href="https://wa.me/5591982586408" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
+							<ion-icon name="logo-whatsapp"></ion-icon>
+						</a>
+					</div>
+				</div>
+
+				<div class="hero__visual">
+					<div class="terminal-card">
+						<div class="terminal-card__bar">
+							<span class="terminal-card__dot"></span>
+							<span class="terminal-card__dot"></span>
+							<span class="terminal-card__dot"></span>
+							<span class="terminal-card__title">api/response.json</span>
+						</div>
+						<div class="terminal-card__body">
+							<div>{</div>
+							<div>&nbsp;&nbsp;<span class="k">"developer"</span>:
+								<span class="s">"Moises Pontes"</span>,</div>
+							<div>&nbsp;&nbsp;<span class="k">"role"</span>:
+								<span class="s">"Backend PHP"</span>,</div>
+							<div>&nbsp;&nbsp;<span class="k">"stack"</span>: [<span class="s">"PHP"</span>,
+								<span class="s">"Laravel"</span>,
+								<span class="s">"MySQL"</span>],</div>
+							<div>&nbsp;&nbsp;<span class="k">"status"</span>:
+								<span class="n">200</span>,
+								<span class="c">//
+																																																																																																																																																																																																																																																																																																																																																																											                  disponível</span>
+							</div>
+							<div>&nbsp;&nbsp;<span class="k">"uptime"</span>:
+								<span class="s">"4+ anos"</span>
+							</div>
+							<div>}</div>
+						</div>
+						<div class="terminal-card__stats">
+							<div class="terminal-card__stat">
+								<strong data-counter="4">0</strong>
+								<span>Anos exp.</span>
+							</div>
+							<div class="terminal-card__stat">
+								<strong data-counter="18">0</strong>
+								<span>Projetos</span>
+							</div>
+							<div class="terminal-card__stat">
+								<strong data-counter="99">0</strong>
+								<span>% Uptime</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero__scroll-cue">
+				<span>Scroll</span>
+				<ion-icon name="chevron-down-outline"></ion-icon>
+			</div>
+		</section>
+
+		<!-- =============================== SOBRE =============================== -->
+		<section class="about" id="sobre">
+			<div class="container about__grid">
+				<div class="about__text reveal">
+					<span class="eyebrow">Sobre mim</span>
+					<h2 class="section-title">Transformo ideias em soluções
+						<span class="text-gradient">digitais reais.</span>
+					</h2>
+					<p class="about__desc">
+						Atuo com desenvolvimento backend em PHP, criação e integração de APIs, integração entre sistemas e automações com robôs de voz e texto. Sou movido por desafios e apaixonado por entender o que acontece por trás dos panos.
+					</p>
+					<span class="about__signature">Pontes</span>
+				</div>
+
+				<div class="feature-grid">
+					<div class="feature-card reveal">
+						<div class="feature-card__icon">
+							<ion-icon name="server-outline"></ion-icon>
+						</div>
+						<h3>Backend PHP</h3>
+						<p>Desenvolvimento com PHP, POO, MVC e boas práticas para códigos limpos e escaláveis.</p>
+					</div>
+					<div class="feature-card reveal">
+						<div class="feature-card__icon">
+							<ion-icon name="code-slash-outline"></ion-icon>
+						</div>
+						<h3>APIs &amp; Integrações</h3>
+						<p>Criação e consumo de APIs REST e SOAP. Integrações seguras e performáticas.</p>
+					</div>
+					<div class="feature-card reveal">
+						<div class="feature-card__icon">
+							<ion-icon name="hardware-chip-outline"></ion-icon>
+						</div>
+						<h3>Automação</h3>
+						<p>Desenvolvimento de automações para robôs de voz e texto, otimizando processos.</p>
+					</div>
+					<div class="feature-card reveal">
+						<div class="feature-card__icon">
+							<ion-icon name="albums-outline"></ion-icon>
+						</div>
+						<h3>Banco de Dados</h3>
+						<p>Modelagem, consultas otimizadas e manutenção em MySQL, PostgreSQL e ambientes relacionais.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- =============================== EXPERIÊNCIA =============================== -->
+		<section class="experience" id="experiencia">
+			<div class="container">
+				<div class="section-head center">
+					<span class="eyebrow" style="justify-content:center;">Trajetória</span>
+					<h2 class="section-title">Experiência profissional</h2>
+					<p class="section-subtitle">Uma linha do tempo do que venho construindo, sistema por sistema.</p>
+				</div>
+
+				<div class="timeline">
+					<article class="timeline-item current reveal">
+						<span class="timeline-item__period">2022 — Atual</span>
+						<div class="timeline-item__card">
+							<div class="timeline-item__header">
+								<h3>Desenvolvedor Backend PHP</h3>
+								<span class="timeline-item__badge">Atual</span>
+							</div>
+							<span class="timeline-item__company">Replikante</span>
+							<p class="timeline-item__desc">
+								Responsável pelo desenvolvimento e manutenção de APIs REST e SOAP,
+																																																																																																																																																																																																																																																																																																																																			                integração entre sistemas internos e externos, e criação de automações
+																																																																																																																																																																																																																																																																																																																																			                para robôs de voz e texto que otimizam o atendimento e reduzem tarefas manuais.
+							</p>
+							<div class="timeline-item__tags">
+								<span class="tag">PHP</span>
+								<span class="tag">Laravel</span>
+								<span class="tag">MySQL</span>
+								<span class="tag">Docker</span>
+								<span class="tag">Automação</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="timeline-item reveal">
+						<span class="timeline-item__period">2021 — 2022</span>
+						<div class="timeline-item__card">
+							<div class="timeline-item__header">
+								<h3>Desenvolvedor Backend Freelancer</h3>
+							</div>
+							<span class="timeline-item__company">Projetos independentes</span>
+							<p class="timeline-item__desc">
+								Desenvolvimento de sistemas web sob medida, integrações com serviços de
+																																																																																																																																																																																																																																																																																																																																			                terceiros e construção de bases sólidas em arquitetura MVC e boas
+																																																																																																																																																																																																																																																																																																																																			                práticas de programação.
+							</p>
+							<div class="timeline-item__tags">
+								<span class="tag">PHP</span>
+								<span class="tag">JavaScript</span>
+								<span class="tag">MVC</span>
+								<span class="tag">Bootstrap</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="timeline-item reveal">
+						<span class="timeline-item__period">2021 — 2022</span>
+						<div class="timeline-item__card">
+							<div class="timeline-item__header">
+								<h3>Analista de Suporte Técnico</h3>
+							</div>
+							<span class="timeline-item__company">Radisco Magazine</span>
+							<p class="timeline-item__desc">
+								Desenvolvimento de sistemas web sob medida, integrações com serviços de
+																																																																																																																																																																																																																																																																																																																																			                terceiros e construção de bases sólidas em arquitetura MVC e boas
+																																																																																																																																																																																																																																																																																																																																			                práticas de programação.
+							</p>
+							<div class="timeline-item__tags">
+								<span class="tag">PHP</span>
+								<span class="tag">JavaScript</span>
+								<span class="tag">MVC</span>
+								<span class="tag">Bootstrap</span>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- =============================== HABILIDADES =============================== -->
+		<section class="skills" id="habilidades">
+			<div class="container">
+				<div class="section-head center">
+					<span class="eyebrow" style="justify-content:center;">Stack</span>
+					<h2 class="section-title">Habilidades técnicas</h2>
+					<p class="section-subtitle">Ferramentas e linguagens que uso no dia a dia para transformar ideias em sistemas.
+					</p>
+				</div>
+
+				<div class="skills-groups">
+					<div class="skill-group reveal">
+						<h3 class="skill-group__title">
+							<ion-icon name="server-outline"></ion-icon>
+							Backend</h3>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>PHP</span>
+								<span>95%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="95"></div>
+							</div>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>Laravel</span>
+								<span>90%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="90"></div>
+							</div>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>MVC</span>
+								<span>92%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="92"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="skill-group reveal">
+						<h3 class="skill-group__title">
+							<ion-icon name="git-network-outline"></ion-icon>
+							Integrações</h3>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>APIs REST</span>
+								<span>94%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="94"></div>
+							</div>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>SOAP</span>
+								<span>85%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="85"></div>
+							</div>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>Integração de sistemas</span>
+								<span>90%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="90"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="skill-group reveal">
+						<h3 class="skill-group__title">
+							<ion-icon name="layers-outline"></ion-icon>
+							Dados &amp; Front</h3>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>MySQL</span>
+								<span>90%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="90"></div>
+							</div>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>Docker</span>
+								<span>78%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="78"></div>
+							</div>
+						</div>
+						<div class="skill-bar">
+							<div class="skill-bar__label">
+								<span>Vue.js</span>
+								<span>75%</span>
+							</div>
+							<div class="skill-bar__track">
+								<div class="skill-bar__fill" data-width="75"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p class="skill-tags-title">Outras tecnologias e práticas</p>
+				<div class="skill-tags">
+					<span class="tag">JavaScript</span>
+					<span class="tag">Bootstrap</span>
+					<span class="tag">Robôs de voz</span>
+					<span class="tag">Automação de processos</span>
+					<span class="tag">Git</span>
+					<span class="tag">Clean Code</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- =============================== PROJETOS =============================== -->
+		<section class="projects" id="projetos">
+			<div class="container">
+				<div class="section-head center">
+					<span class="eyebrow" style="justify-content:center;">Portfólio</span>
+					<h2 class="section-title">Projetos selecionados</h2>
+					<p class="section-subtitle">Uma amostra de sistemas, integrações e automações que desenvolvi.</p>
+				</div>
+
+				<div class="projects-grid">
+					<article class="project-card reveal">
+						<div class="project-card__top">
+							<div class="project-card__icon">
+								<ion-icon name="mic-outline"></ion-icon>
+							</div>
+							<a href="#" class="project-card__link" aria-label="Ver projeto">
+								<ion-icon name="arrow-forward-outline"></ion-icon>
+							</a>
+						</div>
+						<div class="project-card__body">
+							<h3>Robô de Atendimento por Voz</h3>
+							<p>Automação de atendimento telefônico integrada a APIs internas, reduzindo tempo médio de resposta em
+																																																																																																																																																																																																																																																																																																																																			                40%.</p>
+							<div class="project-card__tags">
+								<span class="tag">PHP</span>
+								<span class="tag">SOAP</span>
+								<span class="tag">Automação</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card reveal">
+						<div class="project-card__top">
+							<div class="project-card__icon">
+								<ion-icon name="git-merge-outline"></ion-icon>
+							</div>
+							<a href="#" class="project-card__link" aria-label="Ver projeto">
+								<ion-icon name="arrow-forward-outline"></ion-icon>
+							</a>
+						</div>
+						<div class="project-card__body">
+							<h3>Middleware de Integração</h3>
+							<p>Camada de integração entre sistemas legados e serviços modernos via APIs REST, com filas e cache.</p>
+							<div class="project-card__tags">
+								<span class="tag">Laravel</span>
+								<span class="tag">REST</span>
+								<span class="tag">MySQL</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card reveal">
+						<div class="project-card__top">
+							<div class="project-card__icon">
+								<ion-icon name="chatbox-ellipses-outline"></ion-icon>
+							</div>
+							<a href="#" class="project-card__link" aria-label="Ver projeto">
+								<ion-icon name="arrow-forward-outline"></ion-icon>
+							</a>
+						</div>
+						<div class="project-card__body">
+							<h3>Chatbot de Texto Multicanal</h3>
+							<p>Automação de conversas em múltiplos canais com painel administrativo em Vue.js e backend em PHP.</p>
+							<div class="project-card__tags">
+								<span class="tag">Vue.js</span>
+								<span class="tag">PHP</span>
+								<span class="tag">Docker</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card reveal">
+						<div class="project-card__top">
+							<div class="project-card__icon">
+								<ion-icon name="cloud-upload-outline"></ion-icon>
+							</div>
+							<a href="#" class="project-card__link" aria-label="Ver projeto">
+								<ion-icon name="arrow-forward-outline"></ion-icon>
+							</a>
+						</div>
+						<div class="project-card__body">
+							<h3>Painel de Monitoramento de APIs</h3>
+							<p>Dashboard para acompanhar performance, disponibilidade e logs de integrações em tempo real.</p>
+							<div class="project-card__tags">
+								<span class="tag">PHP</span>
+								<span class="tag">MySQL</span>
+								<span class="tag">JavaScript</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card reveal">
+						<div class="project-card__top">
+							<div class="project-card__icon">
+								<ion-icon name="cart-outline"></ion-icon>
+							</div>
+							<a href="#" class="project-card__link" aria-label="Ver projeto">
+								<ion-icon name="arrow-forward-outline"></ion-icon>
+							</a>
+						</div>
+						<div class="project-card__body">
+							<h3>Sistema de Gestão de Pedidos</h3>
+							<p>Plataforma MVC para gestão de pedidos com integração a gateways de pagamento e emissão de notas.</p>
+							<div class="project-card__tags">
+								<span class="tag">MVC</span>
+								<span class="tag">Bootstrap</span>
+								<span class="tag">PHP</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card reveal">
+						<div class="project-card__top">
+							<div class="project-card__icon">
+								<ion-icon name="cube-outline"></ion-icon>
+							</div>
+							<a href="#" class="project-card__link" aria-label="Ver projeto">
+								<ion-icon name="arrow-forward-outline"></ion-icon>
+							</a>
+						</div>
+						<div class="project-card__body">
+							<h3>API de Autenticação Centralizada</h3>
+							<p>Serviço de autenticação único (SSO) consumido por múltiplas aplicações internas via REST.</p>
+							<div class="project-card__tags">
+								<span class="tag">Laravel</span>
+								<span class="tag">REST</span>
+								<span class="tag">Docker</span>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- =============================== FORMAÇÃO =============================== -->
+		<section class="education" id="formacao">
+			<div class="container">
+				<div class="section-head center">
+					<span class="eyebrow" style="justify-content:center;">Formação</span>
+					<h2 class="section-title">Formação acadêmica</h2>
+					<p class="section-subtitle">Base teórica que sustenta a prática do dia a dia.</p>
+				</div>
+
+				<div class="education-grid">
+					<div class="education-card reveal">
+						<div class="education-card__icon">
+							<ion-icon name="school-outline"></ion-icon>
+						</div>
+						<div>
+							<span class="education-card__period">Pós-graduação</span>
+							<h3>Engenharia de Software</h3>
+							<p>PUC Minas</p>
+						</div>
+					</div>
+
+					<div class="education-card reveal">
+						<div class="education-card__icon">
+							<ion-icon name="ribbon-outline"></ion-icon>
+						</div>
+						<div>
+							<span class="education-card__period">Tecnólogo</span>
+							<h3>Análise e Desenvolvimento de Sistemas</h3>
+							<p>UEPA — Universidade do Estado do Pará</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- =============================== CONTATO =============================== -->
+		<section class="contact" id="contato">
+			<div class="container contact__grid">
+				<div class="contact-info reveal">
+					<span class="eyebrow">Contato</span>
+					<h2 class="section-title">Vamos construir algo juntos?</h2>
+					<p class="section-subtitle" style="margin-bottom:36px;">
+						Estou disponível para novos projetos, integrações e automações. Envie uma
+																																																																																																																																																																																																																																																			            mensagem e retorno o mais breve possível.
+					</p>
+
+					<div class="contact-info__item">
+						<div class="contact-info__icon">
+							<ion-icon name="mail-outline"></ion-icon>
+						</div>
+						<div>
+							<h4>E-mail</h4>
+							<p>contato@devpontes.com.br</p>
+						</div>
+					</div>
+					<div class="contact-info__item">
+						<div class="contact-info__icon">
+							<ion-icon name="logo-whatsapp"></ion-icon>
+						</div>
+						<div>
+							<h4>WhatsApp</h4>
+							<p>+55 (00) 00000-0000</p>
+						</div>
+					</div>
+					<div class="contact-info__item">
+						<div class="contact-info__icon">
+							<ion-icon name="location-outline"></ion-icon>
+						</div>
+						<div>
+							<h4>Localização</h4>
+							<p>Brasil · Atendimento remoto</p>
+						</div>
+					</div>
+				</div>
+
+				<form class="contact-form reveal" id="contactForm" novalidate>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="name">Nome</label>
+							<input type="text" id="name" name="name" placeholder="Seu nome completo"/>
+							<span class="form-error" data-error-for="name"></span>
+						</div>
+						<div class="form-group">
+							<label for="email">E-mail</label>
+							<input type="email" id="email" name="email" placeholder="seu@email.com"/>
+							<span class="form-error" data-error-for="email"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subject">Assunto</label>
+						<input type="text" id="subject" name="subject" placeholder="Sobre o que vamos conversar?"/>
+						<span class="form-error" data-error-for="subject"></span>
+					</div>
+					<div class="form-group">
+						<label for="message">Mensagem</label>
+						<textarea id="message" name="message" placeholder="Conte-me um pouco sobre seu projeto..."></textarea>
+						<span class="form-error" data-error-for="message"></span>
+					</div>
+					<button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+						<ion-icon name="send-outline"></ion-icon>
+						Enviar mensagem
+					</button>
+					<p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+				</form>
+			</div>
+		</section>
+
+	</main>
+{% endblock %}
+
+{% block scripts %}
+	<script src="{{ asset('js/script.js') }}"></script>
 {% endblock %}

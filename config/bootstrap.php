@@ -2,6 +2,7 @@
 
 use Core\View;
 use Dotenv\Dotenv;
+use Core\Extension\ViewExtension;
 
 // ---------------------------------------------------------------------
 // Environment
@@ -38,3 +39,4 @@ if (session_status() === PHP_SESSION_NONE) {
 // Class View
 // ---------------------------------------------------------------------
 $view = new View();
+$view->getTwig()->addExtension(new ViewExtension());

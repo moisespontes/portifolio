@@ -14,3 +14,17 @@ function root_path(string $dir = ''): string
         ? $root
         : $root . DIRECTORY_SEPARATOR . ltrim($dir, '/\\');
 }
+
+// ##### URLs #####
+
+/**
+ * Base URL
+ */
+function url(string $path = ''): string
+{
+    if ($path == '') {
+        return $_ENV['APP_URL'];
+    }
+
+    return $_ENV['APP_URL'] . '/' . ltrim($path, '/');
+}
