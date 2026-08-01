@@ -1,14 +1,7 @@
 <?php
 
 use Core\View;
-use Dotenv\Dotenv;
 use Core\Extension\ViewExtension;
-
-// ---------------------------------------------------------------------
-// Environment
-// ---------------------------------------------------------------------
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
 
 // ---------------------------------------------------------------------
 // Timezone
@@ -16,24 +9,14 @@ $dotenv->load();
 date_default_timezone_set('America/Sao_Paulo');
 
 // ---------------------------------------------------------------------
+// Environment
+// ---------------------------------------------------------------------
+require __DIR__ . '/environment.php';
+
+// ---------------------------------------------------------------------
 // Session configuration
 // ---------------------------------------------------------------------
-ini_set('session.use_strict_mode', '1'); // mitiga session fixation via cookie forjado
-
-session_name('app_sessid');
-
-session_set_cookie_params([
-    'lifetime' => 86400,
-    'path'     => '/',
-    'domain'   => $_ENV['APP_DOMAIN'] ?: '',
-    'secure'   => $_ENV['APP_ENV'] === 'prod',
-    'httponly' => true,
-    'samesite' => 'Lax',
-]);
-
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+require __DIR__ . '/sessiom.php';
 
 // ---------------------------------------------------------------------
 // Class View

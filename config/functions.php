@@ -1,6 +1,26 @@
 <?php
 
 /**
+ * Retona uma variavel de ambiente
+ */
+function env(string $key, mixed $default = null): mixed
+{
+    $value = $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key);
+
+    if ($value === false || $value === null) {
+        return $default;
+    }
+
+    return match (strtolower((string) $value)) {
+        'true', '(true)'   => true,
+        'false', '(false)' => false,
+        'null', '(null)'   => null,
+        'empty', '(empty)' => '',
+        default            => $value,
+    };
+}
+
+/**
  * Retorna a raiz do projeto
  *
  * @param string $dir
@@ -22,9 +42,11 @@ function root_path(string $dir = ''): string
  */
 function url(string $path = ''): string
 {
+    $url = env('APP_URL');
+
     if ($path == '') {
-        return $_ENV['APP_URL'];
+        return $url;
     }
 
-    return $_ENV['APP_URL'] . '/' . ltrim($path, '/');
+    return $url . '/' . ltrim($path, '/');
 }
