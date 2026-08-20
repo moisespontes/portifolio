@@ -7,8 +7,10 @@ use PDOStatement;
 
 class QueryExecutor
 {
-    public function __construct(private readonly PDO $pdo)
-    {
+    public function __construct(
+        private readonly PDO $pdo,
+        private readonly int $fetchMode = PDO::FETCH_OBJ
+    ) {
     }
 
     public function one(QueryBuilder $builder): object|array|false
@@ -19,7 +21,7 @@ class QueryExecutor
 
         $stmt->execute();
 
-        return $stmt->fetch();
+        return $stmt->fetch($this->fetchMode);
     }
 
     public function all(QueryBuilder $builder): array
@@ -28,7 +30,7 @@ class QueryExecutor
 
         $stmt->execute();
 
-        return $stmt->fetchAll();
+        return $stmt->fetchAll($this->fetchMode);
     }
 
     public function lastInsertId(): string|false

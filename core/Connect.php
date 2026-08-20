@@ -15,7 +15,6 @@ use RuntimeException;
 class Connect
 {
     private const OPTIONS = [
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
         PDO::ATTR_CASE               => PDO::CASE_NATURAL,
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES   => false,
@@ -29,7 +28,7 @@ class Connect
      * Método de Conexão com o Banco de Dados
      *
      * @return PDO
-     * @throws PDOException
+     * @throws RuntimeException
      */
     public static function getConn(): PDO
     {
@@ -50,7 +49,7 @@ class Connect
                 self::$conn = new PDO($dsn, $user, $pass, self::OPTIONS);
             } catch (PDOException $ex) {
                 // loggar erro mais tarde
-                die('Error connecting to the database');
+                throw new RuntimeException(message:'Error connecting to the database', previous:$ex);
             }
         }
 
