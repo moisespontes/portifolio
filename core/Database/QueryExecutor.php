@@ -13,7 +13,7 @@ class QueryExecutor
     ) {
     }
 
-    public function one(QueryBuilder $builder): object|array|false
+    public function one(QueryBuilder $builder): object|false
     {
         $builder->limit(1);
 
